@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GazaliEdge</title>
+    <!-- Import Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #666666;
+            margin-top: 10px;
+        }
+
+        /* Button Styling */
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Button Hover Effect */
+        button:hover {
+            background-color: #e63946;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Text Content */
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Developer Section */
+        .developer-section {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .developer-section h1 {
+            font-size: 1.8rem;
+            color: #333333;
+        }
+
+        .developer-section p {
+            font-size: 1rem;
+            color: #555555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>GazaliEdge</h1>
+            <p>Your go-to finance and stock analysis tool</p>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Welcome to GazaliEdge</h2>
+            <p>GazaliEdge is a personalized finance and stock analysis tool designed for comprehensive market insights. With modern technical indicators, financial fundamentals, and custom charting, it provides detailed guidance for informed investment decisions.</p>
+            <button onclick="triggerDownload()">Download GazaliEdge</button>
+        </section>
+
+        <section class="developer-section">
+            <h1>Developer</h1>
+            <p>Ayaan Gazali, a finance and programming enthusiast, combines both fields to create innovative solutions. Passionate about finance, Ayaan builds tools that simplify technical analysis for better investment insights. His latest project, GazaliEdge, merges finance with technology to help others make informed financial choices.</p>
+        </section>
+    </div>
+
+    <script>
+        function triggerDownload() {
+            const fileName = 'GazaliEdge.zip';
+            const filePath = './' + fileName;
+
+            const downloadLink = document.createElement('a');
+            downloadLink.href = filePath;
+            downloadLink.download = fileName;
+
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+</body>
+</html>
